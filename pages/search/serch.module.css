@@ -1,0 +1,14 @@
+.subTitle {
+  color: #828282;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 130%;
+  margin-top: 80px;
+  text-align: center;
+}
+.wrapper {
+  padding-top: 80px;
+  max-width: 1360px;
+  margin: 0 auto;
+}

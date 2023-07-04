@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+
+  column-gap: 20px;
+  margin-top: 90px;
+}
+.firstColumn,
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.paginationButton {
+  width: 100%;
+  height: 53px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid var(--Pink3);
+  margin-top: 50px;
+  cursor: pointer;
+  color: var(--fontColorGray);
+  font-size: 18px;
+  font-family: Inter;
+  line-height: 140%;
+}
