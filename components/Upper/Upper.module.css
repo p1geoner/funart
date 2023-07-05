@@ -1,0 +1,11 @@
+.button {
+  position: fixed;
+  width: 53px;
+  height: 53px;
+  right: 20px;
+  bottom: 50px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}

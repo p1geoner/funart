@@ -18,3 +18,16 @@
   gap: 20px;
   max-width: 290px;
 }
+.swiperSlide {
+  min-width: 325px;
+}
+.swiper {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1000px) {
+  .popularThemes {
+    display: none;
+  }
+}

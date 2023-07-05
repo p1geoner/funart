@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./serch.module.css";
 import SliderCategory from "@/components/SliderCategory/SliderCategory";
 import axiosConfig from "@/utils/axiosConfig";
+import Upper from "@/components/Upper/Upper";
 
 const SearchResults = observer(() => {
   const router = useRouter();
@@ -63,6 +64,7 @@ const SearchResults = observer(() => {
           </div>
         )}
       </div>
+      <Upper />
     </>
   );
 });

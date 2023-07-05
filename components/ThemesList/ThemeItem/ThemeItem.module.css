@@ -44,15 +44,56 @@
   text-align: center;
   left: 30px;
   bottom: 30px;
-  font-family: "Inter";
+  font-size: 24px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 140%;
+  font-weight: 600;
+  line-height: 130%;
   text-align: center;
   color: #ffffff;
 }
 .image {
   width: 100%;
   min-height: 448px;
+}
+@media (max-width: 1000px) {
+  .imageBackground {
+    width: 100%;
+    height: 371px;
+  }
+  .image {
+    width: 100%;
+    min-height: 371px;
+  }
+  .text {
+    opacity: 1;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    background-color: #ffffff;
+  }
+  .text p {
+    text-align: start;
+    color: #4a4a4a;
+  }
+}
+@media (max-width: 850px) {
+  .imageBackground {
+    width: 100%;
+    height: 290px;
+  }
+  .image {
+    width: 100%;
+    min-height: 290px;
+  }
+  .text p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .text p {
+    font-size: 24px;
+  }
 }

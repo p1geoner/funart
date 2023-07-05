@@ -1,0 +1,100 @@
+.button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  width: 53px;
+  height: 53px;
+  cursor: pointer;
+}
+.svgRectHover {
+  display: none;
+}
+.button:hover .svgRectHover {
+  display: block;
+}
+.button:hover .svgRectWhite {
+  fill: #fff;
+}
+.wrapperInner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.modal {
+  position: absolute;
+  top: 93px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.476);
+}
+.modalWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--backColor);
+  border-radius: 0px 0px 16px 16px;
+}
+.navigation {
+  padding: 10px 30px;
+  color: #4a4a4a;
+  /* h2(480p) */
+  font-size: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+.openList {
+  padding: 10px 30px;
+  color: #4a4a4a;
+  /* h2(480p) */
+  font-size: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+.categoryList {
+  margin-top: 41px;
+}
+.option {
+  padding: 10px 30px;
+  color: #4a4a4a;
+  font-size: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.activeOption {
+  background-color: #976eaf;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  border-radius: 16px;
+}
+.modalWrapper a {
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+  .button {
+    display: block;
+  }
+  .activeOption {
+    border-radius: 0;
+  }
+}

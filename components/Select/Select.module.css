@@ -80,3 +80,8 @@
   color: white;
   background-color: var(--Pink3);
 }
+@media (max-width: 1000px) {
+  .wrapper {
+    display: none;
+  }
+}

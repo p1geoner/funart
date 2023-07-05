@@ -13,10 +13,34 @@ const SliderCategory = observer(({ categories }) => {
         The most popular coloring ideas for today
       </p>
       <Swiper
-        navigation={true}
         spaceBetween={20}
         height={420}
+        loop={true}
         slidesPerView={4}
+        breakpoints={{
+          1320: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1112: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+          },
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+          },
+        }}
         className={classes.swiper}>
         {categories.map((category) => {
           return (

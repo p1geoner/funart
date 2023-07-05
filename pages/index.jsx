@@ -12,6 +12,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import ThemeList from "@/components/ThemesList/ThemeList";
 import { Inter } from "next/font/google";
+import Upper from "@/components/Upper/Upper";
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const getStaticProps = async () => {
@@ -51,14 +52,15 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={inter.style} className={classes.wrapper}>
+      <div className={classes.wrapper}>
         <Title
-          title={"Coloring for fun ааавыыф   🌈"}
+          title={"Coloring for fun 🌈"}
           description={"About 6k coloring pages"}
         />
         <SliderCategory categories={popularThemes}></SliderCategory>
         <ThemeList name={"All Colorings"} list={themeList.themes} />
       </div>
+      <Upper />
     </>
   );
 });

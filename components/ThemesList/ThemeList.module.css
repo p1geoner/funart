@@ -31,3 +31,27 @@
 }
 .paginationButton:hover {
 }
+@media (max-width: 1000px) {
+  .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .title {
+    font-size: 28px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 360px) {
+  .title {
+    font-size: 28px;
+  }
+}

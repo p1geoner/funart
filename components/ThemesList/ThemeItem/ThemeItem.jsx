@@ -13,7 +13,9 @@ const ThemeItem = ({ theme }) => {
           alt={theme.name}
           fill={true}
         />
-        <p className={classes.text}>{theme.name}</p>
+        <div className={classes.text}>
+          <p>{theme.name}</p>
+        </div>
       </div>
     </Link>
   );

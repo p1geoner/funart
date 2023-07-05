@@ -56,3 +56,36 @@
   font-weight: 400;
   line-height: 140%;
 }
+@media (max-width: 1000px) {
+  .title {
+    font-size: 50px;
+  }
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    padding: 50px 40px;
+  }
+  .firstElement {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  .navigationWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+  .wrapper {
+    padding: 50px 30px;
+  }
+}

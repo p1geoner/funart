@@ -7,6 +7,8 @@ import ColoringsList from "@/components/ColoringsList/ColoringsList";
 import classes from "./coloringPage.module.css";
 import store from "@/store/store";
 import PopularThemesList from "@/components/SliderCategory/popularThemesList";
+import SliderCategory from "@/components/SliderCategory/SliderCategory";
+import Upper from "@/components/Upper/Upper";
 
 export const getStaticProps = async ({ params }) => {
   const id = params.id.toString();
@@ -59,8 +61,13 @@ const CategoryPage = ({ coloringsList, popularThemes, categories }) => {
       />
       <div className={classes.flexWrapper}>
         <PopularThemesList list={popularThemes} />
+        <div className={classes.slider}>
+          <SliderCategory categories={popularThemes} />
+        </div>
+
         <ColoringsList list={coloringsList.colorings} />
       </div>
+      <Upper />
     </div>
   );
 };

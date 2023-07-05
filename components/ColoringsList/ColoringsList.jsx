@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { observer } from "mobx-react-lite";
 const ColoringsList = observer(({ list }) => {
   const { asPath } = useRouter();
+  const [colorList, setList] = useState(list);
   const [firstColumn, setFirstColumn] = useState(
     list.slice(0, list.length / 2),
   );
@@ -18,11 +19,13 @@ const ColoringsList = observer(({ list }) => {
     store.pagination.currentPage = 1;
     setFirstColumn(list.slice(0, list.length / 2));
     setSecondColumn(list.slice(list.length / 2, list.length));
+    setList(list);
   }, [asPath]);
 
   useEffect(() => {
     if (store.pagination.currentPage !== 1) {
       const newColoringsList = store.categories.coloringsList;
+      setList(colorList.concat(newColoringsList));
       const newFirstColumn = firstColumn.concat(
         newColoringsList.slice(0, newColoringsList.length / 2),
       );
@@ -67,6 +70,17 @@ const ColoringsList = observer(({ list }) => {
             );
           })}
         </div>
+      </div>
+      <div className={classes.wrapperMobile}>
+        {colorList.map((coloring) => {
+          return (
+            <ColoringItem
+              key={coloring.id}
+              name={coloring.name}
+              image={coloring.image}
+            />
+          );
+        })}
       </div>
       <Pagination />
     </div>

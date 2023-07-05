@@ -25,3 +25,17 @@
   font-family: Inter;
   line-height: 140%;
 }
+.wrapperMobile {
+  display: none;
+}
+@media (max-width: 480px) {
+  .wrapper {
+    display: none;
+  }
+  .wrapperMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+  }
+}

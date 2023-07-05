@@ -12,3 +12,8 @@
   max-width: 1360px;
   margin: 0 auto;
 }
+@media (max-width: 1000px) {
+  .wrapper {
+    padding: 80px 40px;
+  }
+}
