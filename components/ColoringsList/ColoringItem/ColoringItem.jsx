@@ -10,7 +10,7 @@ const ColoringItem = ({ name, image }) => {
     position: "inherit",
   };
   const handlePrint = () => {
-    const url = `http://127.0.0.1:8000${image}`;
+    const url = `https://api-didishka.ru${image}`;
     const printWindow = window.open("", "_blank");
     printWindow.document.write("<html><head><title>Print</title></head><body>");
     printWindow.document.write(
@@ -39,7 +39,7 @@ const ColoringItem = ({ name, image }) => {
           height={400}
           style={style}
           sizes="(min-height: 768px) (width:100%)"
-          src={`http://127.0.0.1:8000${image}`}
+          src={`https://api-didishka.ru${image}`}
           alt={name}
           priority
         />
@@ -48,7 +48,7 @@ const ColoringItem = ({ name, image }) => {
           <div className={classes.buttons}>
             <a
               className={classes.buttonDownLoad}
-              href={`http://127.0.0.1:8000${image}`}
+              href={`https://api-didishka.ru${image}`}
               download>
               <svg
                 width="16"

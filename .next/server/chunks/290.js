@@ -154,7 +154,7 @@ __webpack_async_result__();
 
 
 const SliderItem = ({ category , width  })=>{
-    const src = `http://127.0.0.1:8000${category.image}`;
+    const src = `https://api-didishka.ru${category.image}`;
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
         href: `/theme/${category.id}`,
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default function axiosConfig() {
-  const devOrProd = "http://127.0.0.1:8000/api/";
+  const devOrProd = "https://api-didishka.ru/api/";
   const user = "token";
 
   const instance = axios.create({
@@ -12,7 +12,7 @@ export default function axiosConfig() {
     (config) => {
       // Проверяем тип запроса на GET или POST
       if (config.method === "get") {
-        // config.headers["token"] = user;
+        config.headers["token"] = user;
         config.headers["Content-Type"] = "multipart/form-data";
       } else if (config.method === "post") {
         config.headers["token"] = user;

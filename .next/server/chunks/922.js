@@ -164,7 +164,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 function axiosConfig() {
-    const devOrProd = "http://127.0.0.1:8000/api/";
+    const devOrProd = "https://api-didishka.ru/api/";
     const user = "token";
     const instance = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
         baseURL: devOrProd
@@ -172,7 +172,7 @@ function axiosConfig() {
     instance.interceptors.request.use((config)=>{
         // Проверяем тип запроса на GET или POST
         if (config.method === "get") {
-            // config.headers["token"] = user;
+            config.headers["token"] = user;
             config.headers["Content-Type"] = "multipart/form-data";
         } else if (config.method === "post") {
             config.headers["token"] = user;

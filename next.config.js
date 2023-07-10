@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["127.0.0.1"],
+    domains: ["api-didishka.ru", "127.0.0.1"],
   },
 };
 module.exports = nextConfig;

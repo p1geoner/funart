@@ -101,7 +101,7 @@ const ColoringItem = ({ name , image  })=>{
         position: "inherit"
     };
     const handlePrint = ()=>{
-        const url = `http://127.0.0.1:8000${image}`;
+        const url = `https://api-didishka.ru${image}`;
         const printWindow = window.open("", "_blank");
         printWindow.document.write("<html><head><title>Print</title></head><body>");
         printWindow.document.write('<img id="printImage" src="' + url + '" style="width:100%" />');
@@ -129,7 +129,7 @@ const ColoringItem = ({ name , image  })=>{
                     height: 400,
                     style: style,
                     sizes: "(min-height: 768px) (width:100%)",
-                    src: `http://127.0.0.1:8000${image}`,
+                    src: `https://api-didishka.ru${image}`,
                     alt: name,
                     priority: true
                 }),
@@ -145,7 +145,7 @@ const ColoringItem = ({ name , image  })=>{
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                                     className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().buttonDownLoad),
-                                    href: `http://127.0.0.1:8000${image}`,
+                                    href: `https://api-didishka.ru${image}`,
                                     download: true,
                                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
                                         width: "16",

@@ -68,18 +68,6 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
       />
       <SliderCategory categories={popularThemes} />
       <ThemeList name={""} list={categoryList.themes} />
-      {categoryList.themes.map((theme) => {
-        const src = `http://127.0.0.1:8000${theme.image}`;
-        return (
-          <a
-            key={theme.id}
-            className={classes.text}
-            download={`Шрек_14_xx65OV6.jpg`}
-            href={`http://127.0.0.1:8000/uploads/themes/%D0%A8%D1%80%D0%B5%D0%BA_14_xx65OV6.jpg`}>
-            {theme.name}
-          </a>
-        );
-      })}
     </div>
   );
 };

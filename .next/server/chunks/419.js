@@ -109,7 +109,7 @@ __webpack_async_result__();
 
 
 const ThemeItem = ({ theme  })=>{
-    const src = `http://127.0.0.1:8000${theme.image}`;
+    const src = `https://api-didishka.ru${theme.image}`;
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
         className: (_ThemeItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().container),
         href: `/theme/${theme.id}`,
