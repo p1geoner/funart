@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   display: inline-block;
-  width: 200px;
+  transition: none;
 }
 .selected {
   display: flex;
@@ -13,13 +13,16 @@
   border: 1px solid var(--Pink3);
   border-radius: 100px;
   cursor: pointer;
+  transition: none;
 }
 .selected:hover {
   background-color: var(--Pink3);
   color: white;
+  transition: none;
 }
 .selected:hover svg path {
   stroke: white;
+  transition: none;
 }
 
 .selectedOpen {
@@ -34,6 +37,7 @@
   border: 1px solid #a459d1;
   border-radius: 100px;
   cursor: pointer;
+  transition: none;
 }
 .selectedOpen svg path {
   stroke: white;
@@ -43,6 +47,7 @@
   font-size: 18px;
   line-height: 140%;
   white-space: nowrap;
+  transition: none;
 }
 .options {
   position: absolute;
@@ -79,6 +84,14 @@
   line-height: 140%;
   color: white;
   background-color: var(--Pink3);
+}
+.link {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 @media (max-width: 1000px) {
   .wrapper {

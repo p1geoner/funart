@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import classes from "./ColoringItem.module.css";
-const ColoringItem = ({ name, image }) => {
+import Link from "next/link";
+const ColoringItem = ({ name, image, id }) => {
   const style = {
     width: "100%",
     height: "auto",
@@ -32,24 +33,26 @@ const ColoringItem = ({ name, image }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Image
-          // className={classes.image}
-          fill={false}
-          width={400}
-          height={400}
-          style={style}
-          sizes="(min-height: 768px) (width:100%)"
-          src={`https://api-didishka.ru${image}`}
-          alt={name}
-          priority
-        />
+        <Link className={classes.container} href={`/theme/coloring/${id}`}>
+          <Image
+            // className={classes.image}
+            fill={false}
+            width={400}
+            height={400}
+            style={style}
+            sizes="(min-height: 768px) (width:100%)"
+            src={`https://api-didishka.ru${image}`}
+            alt={name}
+            priority
+          />
+        </Link>
         <div className={classes.buttonWrapper}>
           <h3 className={classes.nameTitle}>{name}</h3>
           <div className={classes.buttons}>
             <a
               className={classes.buttonDownLoad}
-              href={`https://api-didishka.ru${image}`}
-              download>
+              href={`https://api-didishka.ru/api/colorings/${id}/download/`}
+              download={`${name}.jpeg`}>
               <svg
                 width="16"
                 height="16"

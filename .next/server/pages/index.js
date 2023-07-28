@@ -87,7 +87,7 @@ const getStaticProps = async ()=>{
     const categories = response.data.categories;
     const response2 = await (0,_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z)().get(`themes/populars/`);
     const popularThemes = response2.data.themes;
-    const response3 = await (0,_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z)().get(`themes/?page=1&per_page=8`);
+    const response3 = await (0,_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z)().get(`themes/?page=1&per_page=8&language=English`);
     const themeList = response3.data;
     return {
         props: {
@@ -357,7 +357,7 @@ module.exports = import("swiper/react");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,89,922,290,419,904], () => (__webpack_exec__(9933)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,675,125,922,290,419,904], () => (__webpack_exec__(9933)));
 module.exports = __webpack_exports__;
 
 })();

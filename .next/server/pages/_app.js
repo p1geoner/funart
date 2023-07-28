@@ -19,7 +19,8 @@ module.exports = {
 	"openList": "Burger_openList__J8g8b",
 	"categoryList": "Burger_categoryList__MQ0vn",
 	"option": "Burger_option__D627O",
-	"activeOption": "Burger_activeOption__Ghs0h"
+	"activeOption": "Burger_activeOption__Ghs0h",
+	"wrapper": "Burger_wrapper__4_7iv"
 };
 
 
@@ -54,6 +55,7 @@ module.exports = {
 	"header": "Header_header__pUpk9",
 	"logo": "Header_logo__vPR6R",
 	"centerWrapper": "Header_centerWrapper___VbNa",
+	"LinkAbout": "Header_LinkAbout__BZyUg",
 	"burger": "Header_burger__Hbq3J"
 };
 
@@ -95,7 +97,8 @@ module.exports = {
 	"text": "Select_text__DD6M4",
 	"options": "Select_options__OX633",
 	"option": "Select_option__ontD_",
-	"activeOption": "Select_activeOption__BDnp4"
+	"activeOption": "Select_activeOption__BDnp4",
+	"link": "Select_link__PgigA"
 };
 
 
@@ -405,42 +408,20 @@ const Navigation = ()=>{
                                 href: "/about",
                                 children: "About"
                             }),
-                            /*#__PURE__*/ jsx_runtime.jsx("a", {
-                                className: (Footer_module_default()).navigationLink,
-                                href: "https://web.telegram.org/",
-                                children: "Telegram"
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: (Footer_module_default()).flexColumn,
-                        children: [
-                            /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
-                                className: (Footer_module_default()).navigationLink,
-                                href: "",
-                                children: "FAQ"
-                            }),
-                            /*#__PURE__*/ jsx_runtime.jsx("a", {
-                                className: (Footer_module_default()).navigationLink,
-                                href: "#",
-                                children: "Instagram"
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: (Footer_module_default()).flexColumn,
-                        children: [
                             /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
                                 className: (Footer_module_default()).navigationLink,
                                 href: "/about",
                                 children: "Contact"
-                            }),
-                            /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
-                                className: (Footer_module_default()).navigationLink,
-                                href: "",
-                                children: "Facebook"
                             })
                         ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: (Footer_module_default()).flexColumn,
+                        children: /*#__PURE__*/ jsx_runtime.jsx("a", {
+                            className: (Footer_module_default()).navigationLink,
+                            href: "#",
+                            children: "Pinterest"
+                        })
                     })
                 ]
             }),
@@ -448,7 +429,7 @@ const Navigation = ()=>{
                 className: (Footer_module_default()).secondElement,
                 children: /*#__PURE__*/ jsx_runtime.jsx("p", {
                     className: (Footer_module_default()).navigationText,
-                    children: "\xa9FunArt 2023"
+                    children: "\xa9Didishka 2023"
                 })
             })
         ]
@@ -470,7 +451,7 @@ const Footer = ()=>{
                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("h1", {
                     className: (Footer_module_default()).title,
                     children: [
-                        "FunArt. ",
+                        "Didishka. ",
                         /*#__PURE__*/ jsx_runtime.jsx("p", {
                             children: "Coloring for fun"
                         })
@@ -534,7 +515,7 @@ const Header = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__.observer)(({})=>{
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
                     className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().logo),
                     href: "/",
-                    children: "FunArt"
+                    children: "Didishka"
                 }),
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().adaptiveHeader),
@@ -565,11 +546,18 @@ const Header = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__.observer)(({})=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_SearchBar_SearchBar__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {})
                     ]
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().burger),
-                    children: _store_store__WEBPACK_IMPORTED_MODULE_4__/* ["default"].categories.categorylist */ .Z.categories.categorylist && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_BurgerMenu_Burger__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {
-                        categories: _store_store__WEBPACK_IMPORTED_MODULE_4__/* ["default"].categories.categorylist */ .Z.categories.categorylist
-                    })
+                    children: [
+                        _store_store__WEBPACK_IMPORTED_MODULE_4__/* ["default"].categories.categorylist */ .Z.categories.categorylist && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_BurgerMenu_Burger__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {
+                            categories: _store_store__WEBPACK_IMPORTED_MODULE_4__/* ["default"].categories.categorylist */ .Z.categories.categorylist
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+                            className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().LinkAbout),
+                            href: `/about`,
+                            children: "Abous us"
+                        })
+                    ]
                 })
             ]
         })
@@ -596,8 +584,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2337);
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(460);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1922);
-/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6348);
-/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Layout_module_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6348);
+/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Layout_module_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _pages_404__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8560);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Header_Header__WEBPACK_IMPORTED_MODULE_2__, _store_store__WEBPACK_IMPORTED_MODULE_4__]);
 ([_Header_Header__WEBPACK_IMPORTED_MODULE_2__, _store_store__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -606,15 +597,18 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Hea
 
 
 
+
+
 const Layout = ({ children  })=>{
+    const { pathname  } = (0,next_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Header_Header__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
+            pathname !== "/404" && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Header_Header__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_Layout_module_css__WEBPACK_IMPORTED_MODULE_5___default().wrapper),
+                className: (_Layout_module_css__WEBPACK_IMPORTED_MODULE_7___default().wrapper),
                 children: children
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {})
+            pathname !== "/404" && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {})
         ]
     });
 };
@@ -966,7 +960,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,664,464,922], () => (__webpack_exec__(1430)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,464,125,922,560], () => (__webpack_exec__(1430)));
 module.exports = __webpack_exports__;
 
 })();

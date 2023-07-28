@@ -23,6 +23,7 @@ module.exports = {
 // Exports
 module.exports = {
 	"image": "SliderItem_image__D6PiG",
+	"container": "SliderItem_container__Om_xS",
 	"imageBackground": "SliderItem_imageBackground__QmO65",
 	"text": "SliderItem_text__WpDrN"
 };
@@ -117,7 +118,8 @@ const SliderCategory = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__.observer)
                         className: (_SliderCategory_module_css__WEBPACK_IMPORTED_MODULE_7___default().swiperSlide),
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_SliderItem_SliderItem__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                             category: category,
-                            width: 320
+                            width: 320,
+                            height: 200
                         })
                     }, category.id);
                 })
@@ -153,10 +155,14 @@ __webpack_async_result__();
 
 
 
-const SliderItem = ({ category , width  })=>{
+const SliderItem = ({ category , width , height  })=>{
     const src = `https://api-didishka.ru${category.image}`;
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
         href: `/theme/${category.id}`,
+        className: (_SliderItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().container),
+        style: {
+            height: `${height}px`
+        },
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             className: (_SliderItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().imageBackground),
             style: {
@@ -214,6 +220,13 @@ const Title = ({ title , description  })=>{
     });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Title);
+
+
+/***/ }),
+
+/***/ 8722:
+/***/ (() => {
+
 
 
 /***/ })

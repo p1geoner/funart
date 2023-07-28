@@ -348,7 +348,7 @@ module.exports = import("swiper/react");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,89,922,290,419], () => (__webpack_exec__(7149)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,675,125,922,290,419], () => (__webpack_exec__(7149)));
 module.exports = __webpack_exports__;
 
 })();

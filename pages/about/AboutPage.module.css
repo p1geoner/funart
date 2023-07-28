@@ -1,0 +1,87 @@
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.mesageWrapper {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mesageTitle {
+  color: #4a4a4a;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 62.4px */
+}
+.textWrapper {
+  background-color: #976eaf;
+  border-radius: 0px 16px 16px 16px;
+  padding: 40px 30px;
+  position: relative;
+}
+.textWrapper h3 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+}
+.svgLeft {
+  position: absolute;
+  left: 0;
+  top: -13px;
+}
+.svgRight {
+  position: absolute;
+  right: 0;
+  top: -13px;
+}
+.textWrapperRight {
+  background-color: #976eaf;
+  border-radius: 16px 0px 16px 16px;
+  padding: 40px 30px;
+  position: relative;
+}
+.textWrapperRight h3 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+}
+.mesageWrapperRight {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: flex-end;
+}
+.mesageWrapperRight .mesageTitle {
+  align-self: flex-end;
+}
+
+@media (max-width: 1360px) {
+  .wrapper {
+    padding: 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .mesageTitle {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .mesageTitle {
+    font-size: 28px;
+  }
+}

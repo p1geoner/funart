@@ -8,7 +8,14 @@ const PopularThemesList = ({ list }) => {
         The most popular coloring ideas for today
       </p>
       {list.map((category) => {
-        return <SliderItem key={category.id} category={category} width={290} />;
+        return (
+          <SliderItem
+            key={category.id}
+            category={category}
+            width={290}
+            height={145}
+          />
+        );
       })}
     </div>
   );

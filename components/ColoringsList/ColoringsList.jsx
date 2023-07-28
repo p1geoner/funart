@@ -5,8 +5,10 @@ import Pagination from "./Pagination/Pagination";
 import classes from "./ColoringsList.module.css";
 import { useRouter } from "next/router";
 import { observer } from "mobx-react-lite";
+
 const ColoringsList = observer(({ list }) => {
   const { asPath } = useRouter();
+  const router = useRouter();
   const [colorList, setList] = useState(list);
   const [firstColumn, setFirstColumn] = useState(
     list.slice(0, list.length / 2),
@@ -14,7 +16,6 @@ const ColoringsList = observer(({ list }) => {
   const [secondColumn, setSecondColumn] = useState(
     list.slice(list.length / 2, list.length),
   );
-
   useEffect(() => {
     store.pagination.currentPage = 1;
     setFirstColumn(list.slice(0, list.length / 2));
@@ -55,6 +56,7 @@ const ColoringsList = observer(({ list }) => {
                 key={coloring.id}
                 name={coloring.name}
                 image={coloring.image}
+                id={coloring.id}
               />
             );
           })}
@@ -66,6 +68,7 @@ const ColoringsList = observer(({ list }) => {
                 key={coloring.id}
                 name={coloring.name}
                 image={coloring.image}
+                id={coloring.id}
               />
             );
           })}
@@ -78,6 +81,7 @@ const ColoringsList = observer(({ list }) => {
               key={coloring.id}
               name={coloring.name}
               image={coloring.image}
+              id={coloring.id}
             />
           );
         })}

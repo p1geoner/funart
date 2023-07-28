@@ -22,7 +22,9 @@ export const getStaticProps = async () => {
   const response2 = await axiosConfig().get(`themes/populars/`);
   const popularThemes = response2.data.themes;
 
-  const response3 = await axiosConfig().get(`themes/?page=1&per_page=8`);
+  const response3 = await axiosConfig().get(
+    `themes/?page=1&per_page=8&language=English`,
+  );
   const themeList = response3.data;
 
   return {

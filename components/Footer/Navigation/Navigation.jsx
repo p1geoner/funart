@@ -9,31 +9,18 @@ const Navigation = () => {
           <Link className={classes.navigationLink} href={"/about"}>
             About
           </Link>
-          <a
-            className={classes.navigationLink}
-            href="https://web.telegram.org/">
-            Telegram
-          </a>
-        </div>
-        <div className={classes.flexColumn}>
-          <Link className={classes.navigationLink} href={""}>
-            FAQ
-          </Link>
-          <a className={classes.navigationLink} href="#">
-            Instagram
-          </a>
-        </div>
-        <div className={classes.flexColumn}>
           <Link className={classes.navigationLink} href={"/about"}>
             Contact
           </Link>
-          <Link className={classes.navigationLink} href={""}>
-            Facebook
-          </Link>
+        </div>
+        <div className={classes.flexColumn}>
+          <a className={classes.navigationLink} href="#">
+            Pinterest
+          </a>
         </div>
       </div>
       <div className={classes.secondElement}>
-        <p className={classes.navigationText}>©FunArt 2023</p>
+        <p className={classes.navigationText}>©Didishka 2023</p>
       </div>
     </div>
   );

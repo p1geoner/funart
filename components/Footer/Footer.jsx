@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.wrapper}>
         <h1 className={classes.title}>
-          FunArt. <p>Coloring for fun</p>
+          Didishka. <p>Coloring for fun</p>
         </h1>
         <Navigation />
       </div>

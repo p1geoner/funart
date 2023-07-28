@@ -18,7 +18,7 @@ const Header = observer(({}) => {
     <header className={classes.header}>
       <div className={classes.wrapper}>
         <Link className={classes.logo} href={"/"}>
-          FunArt
+          Didishka
         </Link>
         <div className={classes.adaptiveHeader}>
           <Link className={classes.logo} href={"/"}>
@@ -48,6 +48,9 @@ const Header = observer(({}) => {
           {store.categories.categorylist && (
             <Burger categories={store.categories.categorylist} />
           )}
+          <Link className={classes.LinkAbout} href={`/about`}>
+            Abous us
+          </Link>
         </div>
       </div>
     </header>

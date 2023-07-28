@@ -30,7 +30,9 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const response = await axiosConfig().get(`themes/?page=1&per_page=999`);
+  const response = await axiosConfig().get(
+    `themes/?page=1&per_page=999&language=ru`,
+  );
   const themesList = response.data.themes;
   return {
     paths: themesList.map((theme) => ({

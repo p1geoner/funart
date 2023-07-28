@@ -2,10 +2,13 @@ import React from "react";
 import Image from "next/image";
 import classes from "./SliderItem.module.css";
 import Link from "next/link";
-const SliderItem = ({ category, width }) => {
+const SliderItem = ({ category, width, height }) => {
   const src = `https://api-didishka.ru${category.image}`;
   return (
-    <Link href={`/theme/${category.id}`}>
+    <Link
+      href={`/theme/${category.id}`}
+      className={classes.container}
+      style={{ height: `${height}px` }}>
       <div className={classes.imageBackground} style={{ width: `${width}px` }}>
         <Image
           className={classes.image}

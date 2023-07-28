@@ -86,13 +86,16 @@ __webpack_async_result__();
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3077);
-/* harmony import */ var _ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3077);
+/* harmony import */ var _ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-const ColoringItem = ({ name , image  })=>{
+
+const ColoringItem = ({ name , image , id  })=>{
     const style = {
         width: "100%",
         height: "auto",
@@ -118,35 +121,39 @@ const ColoringItem = ({ name , image  })=>{
         printWindow.document.close();
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().wrapper),
+        className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().wrapper),
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().container),
+            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().container),
             children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                    // className={classes.image}
-                    fill: false,
-                    width: 400,
-                    height: 400,
-                    style: style,
-                    sizes: "(min-height: 768px) (width:100%)",
-                    src: `https://api-didishka.ru${image}`,
-                    alt: name,
-                    priority: true
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().container),
+                    href: `/theme/coloring/${id}`,
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                        // className={classes.image}
+                        fill: false,
+                        width: 400,
+                        height: 400,
+                        style: style,
+                        sizes: "(min-height: 768px) (width:100%)",
+                        src: `https://api-didishka.ru${image}`,
+                        alt: name,
+                        priority: true
+                    })
                 }),
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().buttonWrapper),
+                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().buttonWrapper),
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().nameTitle),
+                            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().nameTitle),
                             children: name
                         }),
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().buttons),
+                            className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().buttons),
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().buttonDownLoad),
-                                    href: `https://api-didishka.ru${image}`,
-                                    download: true,
+                                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().buttonDownLoad),
+                                    href: `https://api-didishka.ru/api/colorings/${id}/download/`,
+                                    download: `${name}.jpeg`,
                                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
                                         width: "16",
                                         height: "16",
@@ -175,7 +182,7 @@ const ColoringItem = ({ name , image  })=>{
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().buttonPrint),
+                                    className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().buttonPrint),
                                     onClick: handlePrint,
                                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
                                         width: "20",
@@ -251,6 +258,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_sto
 
 const ColoringsList = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__.observer)(({ list  })=>{
     const { asPath  } = (0,next_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
     const [colorList, setList] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(list);
     const [firstColumn, setFirstColumn] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(list.slice(0, list.length / 2));
     const [secondColumn, setSecondColumn] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(list.slice(list.length / 2, list.length));
@@ -289,7 +297,8 @@ const ColoringsList = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__.observer)(
                         children: firstColumn.map((coloring)=>{
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ColoringItem_ColoringItem__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                                 name: coloring.name,
-                                image: coloring.image
+                                image: coloring.image,
+                                id: coloring.id
                             }, coloring.id);
                         })
                     }),
@@ -298,7 +307,8 @@ const ColoringsList = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__.observer)(
                         children: secondColumn.map((coloring)=>{
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ColoringItem_ColoringItem__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                                 name: coloring.name,
-                                image: coloring.image
+                                image: coloring.image,
+                                id: coloring.id
                             }, coloring.id);
                         })
                     })
@@ -309,7 +319,8 @@ const ColoringsList = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__.observer)(
                 children: colorList.map((coloring)=>{
                     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ColoringItem_ColoringItem__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                         name: coloring.name,
-                        image: coloring.image
+                        image: coloring.image,
+                        id: coloring.id
                     }, coloring.id);
                 })
             }),
@@ -371,7 +382,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 4646:
+/***/ 6874:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -399,7 +410,8 @@ const PopularThemesList = ({ list  })=>{
             list.map((category)=>{
                 return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_SliderItem_SliderItem__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
                     category: category,
-                    width: 290
+                    width: 290,
+                    height: 145
                 }, category.id);
             })
         ]
@@ -431,7 +443,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _coloringPage_module_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5313);
 /* harmony import */ var _coloringPage_module_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_coloringPage_module_css__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1922);
-/* harmony import */ var _components_SliderCategory_popularThemesList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4646);
+/* harmony import */ var _components_SliderCategory_popularThemesList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6874);
 /* harmony import */ var _components_SliderCategory_SliderCategory__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5232);
 /* harmony import */ var _components_Upper_Upper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6904);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_3__, _components_ColoringsList_ColoringsList__WEBPACK_IMPORTED_MODULE_5__, _store_store__WEBPACK_IMPORTED_MODULE_6__, _components_SliderCategory_SliderCategory__WEBPACK_IMPORTED_MODULE_8__]);
@@ -465,7 +477,7 @@ const getStaticProps = async ({ params  })=>{
     };
 };
 const getStaticPaths = async ()=>{
-    const response = await (0,_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z)().get(`themes/?page=1&per_page=999`);
+    const response = await (0,_utils_axiosConfig__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z)().get(`themes/?page=1&per_page=999&language=ru`);
     const themesList = response.data.themes;
     return {
         paths: themesList.map((theme)=>({
@@ -722,7 +734,7 @@ module.exports = import("swiper/react");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,89,922,290,904], () => (__webpack_exec__(9156)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,636,675,125,922,290,904], () => (__webpack_exec__(9156)));
 module.exports = __webpack_exports__;
 
 })();

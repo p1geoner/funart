@@ -45,7 +45,7 @@ const SliderCategory = observer(({ categories }) => {
         {categories.map((category) => {
           return (
             <SwiperSlide key={category.id} className={classes.swiperSlide}>
-              <SliderItem category={category} width={320} />
+              <SliderItem category={category} width={320} height={200} />
             </SwiperSlide>
           );
         })}

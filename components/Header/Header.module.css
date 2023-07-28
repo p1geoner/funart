@@ -29,10 +29,24 @@
   gap: 10px;
   width: 100%;
 }
-@media (max-width: 1000px) {
+.LinkAbout {
+  color: #976eaf;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media (max-width: 1360px) {
   .wrapper {
     padding: 20px 40px;
     gap: 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .LinkAbout {
+    display: none;
   }
 }
 @media (max-width: 768px) {

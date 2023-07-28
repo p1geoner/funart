@@ -90,7 +90,13 @@
 .modalWrapper a {
   text-decoration: none;
 }
+.wrapper {
+  display: none;
+}
 @media (max-width: 1000px) {
+  .wrapper {
+    display: block;
+  }
   .button {
     display: block;
   }

@@ -1,0 +1,60 @@
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 180px;
+}
+.buttonsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  background: transparent;
+  outline: 0;
+  border-radius: 100px;
+  border: 1px solid #976eaf;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.buttonsInnerWrapper {
+  display: flex;
+  gap: 10px;
+}
+.image {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05),
+    0px 3px 7px 0px rgba(0, 0, 0, 0.05), 0px 13px 13px 0px rgba(0, 0, 0, 0.04),
+    0px 30px 18px 0px rgba(0, 0, 0, 0.03), 0px 53px 21px 0px rgba(0, 0, 0, 0.01),
+    0px 82px 23px 0px rgba(0, 0, 0, 0);
+  border-radius: 16px;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.imageWrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+@media (max-width: 1360px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}

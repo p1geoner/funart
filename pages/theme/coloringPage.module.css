@@ -27,3 +27,8 @@
     padding: 80px 40px;
   }
 }
+@media (max-width: 768px) {
+  .flexWrapper {
+    margin-top: 0px;
+  }
+}
