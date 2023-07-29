@@ -523,7 +523,7 @@ const Header = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_5__.observer)(({})=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
                             className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().logo),
                             href: "/",
-                            children: "FunArt"
+                            children: "Didishka"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: (_Header_module_css__WEBPACK_IMPORTED_MODULE_9___default().burger),

@@ -58,3 +58,12 @@
     padding: 0 40px;
   }
 }
+@media (max-width: 768px) {
+  .buttonsWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .button {
+    max-width: 150px;
+  }
+}

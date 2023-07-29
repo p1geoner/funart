@@ -22,7 +22,7 @@ const Header = observer(({}) => {
         </Link>
         <div className={classes.adaptiveHeader}>
           <Link className={classes.logo} href={"/"}>
-            FunArt
+            Didishka
           </Link>
           <div className={classes.burger}>
             {store.categories.categorylist && (

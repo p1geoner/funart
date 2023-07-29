@@ -1,12 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html",
   "/about": "pages/about.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html",
   "/search/[slug]": "pages/search/[slug].html",
+  "/category/[id]": "pages/category/[id].js",
   "/theme/[id]": "pages/theme/[id].js",
   "/": "pages/index.js",
-  "/category/[id]": "pages/category/[id].js",
   "/theme/coloring/[id]": "pages/theme/coloring/[id].js"
 }

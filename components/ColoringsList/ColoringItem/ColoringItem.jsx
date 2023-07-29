@@ -34,17 +34,18 @@ const ColoringItem = ({ name, image, id }) => {
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <Link className={classes.container} href={`/theme/coloring/${id}`}>
-          <Image
-            // className={classes.image}
-            fill={false}
-            width={400}
-            height={400}
-            style={style}
-            sizes="(min-height: 768px) (width:100%)"
-            src={`https://api-didishka.ru${image}`}
-            alt={name}
-            priority
-          />
+          <div className={classes.image}>
+            <Image
+              fill={false}
+              width={400}
+              height={400}
+              style={style}
+              sizes="(min-height: 768px) (width:100%)"
+              src={`https://api-didishka.ru${image}`}
+              alt={name}
+              priority
+            />
+          </div>
         </Link>
         <div className={classes.buttonWrapper}>
           <h3 className={classes.nameTitle}>{name}</h3>

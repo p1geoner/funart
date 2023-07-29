@@ -14,7 +14,6 @@ module.exports = {
 	"buttonPrint": "ColoringItem_buttonPrint__6Ux_U",
 	"buttonDownLoad": "ColoringItem_buttonDownLoad__EY3lC",
 	"buttonWrapper": "ColoringItem_buttonWrapper__N7JEG",
-	"container": "ColoringItem_container__BqsAO",
 	"nameTitle": "ColoringItem_nameTitle__ngtmk",
 	"buttons": "ColoringItem_buttons__coWIg"
 };
@@ -128,16 +127,18 @@ const ColoringItem = ({ name , image , id  })=>{
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                     className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().container),
                     href: `/theme/coloring/${id}`,
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                        // className={classes.image}
-                        fill: false,
-                        width: 400,
-                        height: 400,
-                        style: style,
-                        sizes: "(min-height: 768px) (width:100%)",
-                        src: `https://api-didishka.ru${image}`,
-                        alt: name,
-                        priority: true
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_ColoringItem_module_css__WEBPACK_IMPORTED_MODULE_4___default().image),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                            fill: false,
+                            width: 400,
+                            height: 400,
+                            style: style,
+                            sizes: "(min-height: 768px) (width:100%)",
+                            src: `https://api-didishka.ru${image}`,
+                            alt: name,
+                            priority: true
+                        })
                     })
                 }),
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {

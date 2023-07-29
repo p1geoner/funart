@@ -53,13 +53,13 @@
   padding: 20px;
   z-index: 2;
 }
-.container::before {
+.image::before {
   content: " ";
   position: absolute;
   top: 0;
   left: 0;
 }
-.wrapper:hover .container::before {
+.wrapper:hover .image::before {
   content: " ";
   position: absolute;
   top: 0;
@@ -92,7 +92,7 @@
 @media (max-width: 1000px) {
   .buttonWrapper {
     bottom: 0;
-    position: absolute;
+    position: inherit;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -100,6 +100,35 @@
     z-index: 2;
     background-color: #fff;
     align-items: center;
+  }
+  .wrapper:hover .buttonWrapper {
+    bottom: 0;
+    position: inherit;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+    background-color: #fff;
+    align-items: center;
+  }
+  .wrapper:hover .image::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0.48%,
+      rgba(103, 63, 128, 0.54) 78.54%,
+      rgba(75, 27, 104, 0.6) 100%
+    );
+    opacity: 1;
+    z-index: 1;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
   }
   .nameTitle {
     color: #4a4a4a;
