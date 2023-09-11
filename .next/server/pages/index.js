@@ -9,7 +9,9 @@ exports.modules = {
 
 // Exports
 module.exports = {
-	"wrapper": "Home_wrapper__kA9A_"
+	"wrapper": "Home_wrapper__kA9A_",
+	"wrapperRelative": "Home_wrapperRelative__P72S7",
+	"wrapperAbsolute": "Home_wrapperAbsolute__2FvU9"
 };
 
 
@@ -138,8 +140,14 @@ const Home = (0,mobx_react_lite__WEBPACK_IMPORTED_MODULE_6__.observer)(({ catego
                         title: "Coloring for fun \uD83C\uDF08",
                         description: "About 6k coloring pages"
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_SliderCategory_SliderCategory__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
-                        categories: popularThemes
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_12___default().wrapperRelative),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: (_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_12___default().wrapperAbsolute),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_SliderCategory_SliderCategory__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+                                categories: popularThemes
+                            })
+                        })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_ThemesList_ThemeList__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Z, {
                         name: "All Colorings",

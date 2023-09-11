@@ -13,3 +13,13 @@
     padding: 0 30px;
   }
 }
+.wrapperRelative {
+  position: relative;
+  height: 355px;
+}
+.wrapperAbsolute {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  overflow: hidden;
+}

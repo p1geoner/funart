@@ -59,7 +59,12 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
           title={"Coloring for fun 🌈"}
           description={"About 6k coloring pages"}
         />
-        <SliderCategory categories={popularThemes}></SliderCategory>
+        <div className={classes.wrapperRelative}>
+          <div className={classes.wrapperAbsolute}>
+            <SliderCategory categories={popularThemes}></SliderCategory>
+          </div>
+        </div>
+
         <ThemeList name={"All Colorings"} list={themeList.themes} />
       </div>
       <Upper />

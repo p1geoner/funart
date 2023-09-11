@@ -49,3 +49,8 @@
   text-align: center;
   color: #ffffff;
 }
+@media (max-width: 360px) {
+  .imageBackground {
+    max-width: 300px !important;
+  }
+}
