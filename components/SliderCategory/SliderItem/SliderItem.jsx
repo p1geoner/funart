@@ -3,7 +3,7 @@ import Image from "next/image";
 import classes from "./SliderItem.module.css";
 import Link from "next/link";
 const SliderItem = ({ category, width, height }) => {
-  const src = `https://api-didishka.ru${category.image}`;
+  const src = `https://api-didishka.ru${category.popular_image}`;
   return (
     <Link
       href={`/theme/${category.id}`}

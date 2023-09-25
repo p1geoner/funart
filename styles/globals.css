@@ -11,6 +11,7 @@
 }
 body {
   background-color: var(--backColor);
+  overflow-x: hidden;
 }
 * {
   font-family: Inter;
