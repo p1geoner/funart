@@ -17,6 +17,7 @@ const SliderCategory = observer(({ categories }) => {
         height={420}
         loop={true}
         slidesPerView={4}
+        width={320}
         breakpoints={{
           1320: {
             slidesPerView: 4,
