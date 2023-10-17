@@ -53,7 +53,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: fit-content;
   z-index: 5;
   background: #ffffff;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -67,6 +67,8 @@
   font-size: 18px;
   line-height: 140%;
   color: #4a4a4a;
+  width: fit-content;
+  min-width: 100%;
 }
 .option:hover {
   cursor: pointer;
@@ -92,6 +94,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+  white-space: nowrap;
 }
 @media (max-width: 1000px) {
   .wrapper {

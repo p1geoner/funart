@@ -46,10 +46,9 @@ const ColoringItem = ({ name, image, id }) => {
               priority
             />
           </div>
-        </Link>
-        <div className={classes.buttonWrapper}>
-          <h3 className={classes.nameTitle}>{name}</h3>
-          <div className={classes.buttons}>
+          <div className={classes.buttonWrapper}>
+            <h3 className={classes.nameTitle}>{name}</h3>
+            {/* <div className={classes.buttons}>
             <a
               className={classes.buttonDownLoad}
               href={`https://api-didishka.ru/api/colorings/${id}/download/`}
@@ -94,8 +93,9 @@ const ColoringItem = ({ name, image, id }) => {
                 </defs>
               </svg>
             </button>
+          </div> */}
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
