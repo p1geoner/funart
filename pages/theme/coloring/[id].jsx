@@ -3,14 +3,28 @@ import React from "react";
 import classes from "./coloringSinglePage.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 export const getStaticProps = async ({ params }) => {
   const id = params.id.toString();
+  let prevId = parseInt(params.id) - 1;
+  let nextId = parseInt(params.id) + 1;
+  let hasNext = false;
+  let hasPrev = false;
+  const responsePrev = await axiosConfig().get(`colorings/${prevId}/`);
+  if (responsePrev?.status === 200) {
+    hasPrev = true;
+  }
+
+  const responseNext = await axiosConfig().get(`colorings/${nextId}/`);
+  if (responseNext?.status === 200) {
+    hasNext = true;
+  }
 
   const response = await axiosConfig().get(`colorings/${id}/`);
   const coloring = response.data;
 
   return {
-    props: { coloring },
+    props: { coloring, hasNext, hasPrev },
     revalidate: 3600,
   };
 };
@@ -28,9 +42,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-const SingleColoring = ({ coloring }) => {
+const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
   const router = useRouter();
-
+  const { id } = router.query;
+  const prevId = parseInt(id) - 1;
+  const nextId = parseInt(id) + 1;
   const handlePrint = () => {
     const url = `https://api-didishka.ru${coloring.image}`;
     const printWindow = window.open("", "_blank");
@@ -124,6 +140,59 @@ const SingleColoring = ({ coloring }) => {
           height={1000}
           alt={`${coloring.name}`}
         />
+        <div className={classes.navButtons}>
+          {hasPrev && (
+            <Link
+              href={`/theme/coloring/${prevId}`}
+              className={classes.prevButton}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none">
+                <path
+                  d="M34.0002 24.4999L34.0002 26.4999L22.0002 26.4999L27.5002 31.9999L26.0802 33.4199L18.1602 25.4999L26.0802 17.5799L27.5002 18.9999L22.0002 24.4999L34.0002 24.4999Z"
+                  fill="#976EAF"
+                />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  stroke="#976EAF"
+                />
+              </svg>
+            </Link>
+          )}
+          {hasNext && (
+            <Link
+              href={`/theme/coloring/${nextId}`}
+              className={classes.prevButton}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none">
+                <path
+                  d="M15.9998 25.5001L15.9998 23.5001L27.9998 23.5001L22.4998 18.0001L23.9198 16.5801L31.8398 24.5001L23.9198 32.4201L22.4998 31.0001L27.9998 25.5001L15.9998 25.5001Z"
+                  fill="#976EAF"
+                />
+                <rect
+                  x="49.5"
+                  y="49.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  transform="rotate(-180 49.5 49.5)"
+                  stroke="#976EAF"
+                />
+              </svg>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

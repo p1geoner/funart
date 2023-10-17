@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
 };
 
 const Home = observer(({ categories, popularThemes, themeList }) => {
-  console.log(popularThemes, categories);
+  console.log(popularThemes, categories, themeList);
   useEffect(() => {
     store.categories.categorylist = categories !== undefined && categories;
     store.categories.PickedCategory = "";

@@ -3,6 +3,7 @@
   padding: 50px 0;
   background-color: #703d8f;
   border-radius: 16px 16px 0px 0px;
+  align-self: flex-end;
 }
 .wrapper {
   display: flex;
@@ -56,7 +57,7 @@
   font-weight: 400;
   line-height: 140%;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1350px) {
   .title {
     font-size: 50px;
   }

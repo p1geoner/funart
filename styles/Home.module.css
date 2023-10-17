@@ -3,16 +3,7 @@
   margin: 0 auto;
   padding-top: 80px;
 }
-@media (max-width: 1000px) {
-  .wrapper {
-    padding: 0 40px;
-  }
-}
-@media (max-width: 480px) {
-  .wrapper {
-    padding: 0 30px;
-  }
-}
+
 .wrapperRelative {
   position: relative;
   height: 355px;

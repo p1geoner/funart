@@ -10,14 +10,17 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "clsx": "^2.0.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "mobx": "^6.9.0",
     "mobx-react-lite": "^3.4.3",
     "next": "13.4.4",
+    "nextjs-progressbar": "^0.0.16",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.69.3",
     "swiper": "^9.3.2"
   }
 }

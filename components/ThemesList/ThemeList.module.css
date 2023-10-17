@@ -1,9 +1,9 @@
 .list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
+  row-gap: 30px;
   margin-top: 20px;
 }
 .wrapper {
@@ -31,6 +31,11 @@
 }
 .paginationButton:hover {
 }
+@media (max-width: 1220px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 1000px) {
   .title {
     font-size: 50px;
@@ -41,13 +46,15 @@
     font-size: 50px;
   }
 }
-@media (max-width: 550px) {
-  .title {
-    font-size: 28px;
-  }
+@media (max-width: 660px) {
   .list {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .title {
+    font-size: 28px;
   }
 }
 @media (max-width: 360px) {

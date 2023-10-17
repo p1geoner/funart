@@ -12,10 +12,15 @@
 }
 .header {
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
   background-color: var(--backColor);
+  transform: translateY(-100%);
+}
+.visible {
+  transform: translateY(-0%);
 }
 .logo {
   text-decoration: none;
