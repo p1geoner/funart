@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"..\\components\\ads\\index.jsx -> ./ads":{"id":"..\\components\\ads\\index.jsx -> ./ads","files":["static/chunks/components_ads_ads_jsx.js"]}}
