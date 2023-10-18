@@ -67,7 +67,6 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
         title={categoryList?.category.name}
         description={categoryList?.category.description}
       />
-      <Adverts />
       <SliderCategory categories={popularThemes} />
       <ThemeList name={""} list={categoryList.themes} />
     </div>

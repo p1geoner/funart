@@ -83,7 +83,6 @@ const index = () => {
           </div>
         </div>
       </div>
-      <Adverts />
     </div>
   );
 };
