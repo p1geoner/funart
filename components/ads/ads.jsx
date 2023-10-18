@@ -37,9 +37,9 @@ const Ads = () => {
     <>
       {screenWidth > 480 && <div id="yandex_rtb_R-A-3408799-1"></div>}
       {screenWidth <= 480 && screenWidth > 360 && (
-        <div id="yandex_rtb_R-A-3408799-1"></div>
+        <div id="yandex_rtb_R-A-3408799-2"></div>
       )}
-      {screenWidth < 360 && <div id="yandex_rtb_R-A-3408799-1"></div>}
+      {screenWidth < 360 && <div id="yandex_rtb_R-A-3408799-3"></div>}
     </>
   );
 };
