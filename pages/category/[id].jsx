@@ -7,6 +7,7 @@ import Title from "@/components/Title/Title";
 import SliderCategory from "@/components/SliderCategory/SliderCategory";
 import store from "@/store/store";
 import { observer } from "mobx-react-lite";
+import { Adverts } from "@/components/ads";
 export const getStaticPaths = async () => {
   const response = await axiosConfig().get(`categories/`);
   const categories = response.data.categories;
@@ -66,6 +67,7 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
         title={categoryList?.category.name}
         description={categoryList?.category.description}
       />
+      <Adverts />
       <SliderCategory categories={popularThemes} />
       <ThemeList name={""} list={categoryList.themes} />
     </div>

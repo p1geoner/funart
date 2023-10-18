@@ -9,6 +9,7 @@ import store from "@/store/store";
 import PopularThemesList from "@/components/SliderCategory/popularThemesList";
 import SliderCategory from "@/components/SliderCategory/SliderCategory";
 import Upper from "@/components/Upper/Upper";
+import { Adverts } from "@/components/ads";
 
 export const getStaticProps = async ({ params }) => {
   const id = params.id.toString();
@@ -66,7 +67,7 @@ const CategoryPage = ({ coloringsList, popularThemes, categories }) => {
         <div className={classes.slider}>
           <SliderCategory categories={popularThemes} />
         </div>
-
+        <Adverts />
         <ColoringsList list={coloringsList.colorings} />
       </div>
       <Upper />

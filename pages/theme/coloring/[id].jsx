@@ -4,6 +4,7 @@ import classes from "./coloringSinglePage.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import { Adverts } from "@/components/ads";
 export const getStaticProps = async ({ params }) => {
   const id = params.id.toString();
   let prevId = parseInt(params.id) - 1;
@@ -193,6 +194,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
             </Link>
           )}
         </div>
+        <Adverts />
       </div>
     </div>
   );
