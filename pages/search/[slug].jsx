@@ -53,7 +53,6 @@ const SearchResults = observer(() => {
     <>
       <div className={classes.wrapper}>
         <Title title={title} />
-        <Adverts />
         {store.categories.Themeslist[0] !== undefined ? (
           <>
             <SliderCategory categories={store.categories.popularThemes} />

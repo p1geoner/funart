@@ -67,7 +67,6 @@ const CategoryPage = ({ coloringsList, popularThemes, categories }) => {
         <div className={classes.slider}>
           <SliderCategory categories={popularThemes} />
         </div>
-        <Adverts />
         <ColoringsList list={coloringsList.colorings} />
       </div>
       <Upper />

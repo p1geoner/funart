@@ -194,7 +194,6 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
             </Link>
           )}
         </div>
-        <Adverts />
       </div>
     </div>
   );
