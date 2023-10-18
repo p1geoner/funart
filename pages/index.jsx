@@ -66,9 +66,8 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
           <div className={classes.wrapperAbsolute}>
             <SliderCategory categories={popularThemes}></SliderCategory>
           </div>
-          <Adverts></Adverts>
         </div>
-
+        <Adverts />
         <ThemeList name={"All Colorings"} list={themeList.themes} />
       </div>
       <Upper />

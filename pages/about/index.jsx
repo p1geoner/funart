@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./AboutPage.module.css";
 import Title from "@/components/Title/Title";
+import { Adverts } from "@/components/ads";
 const index = () => {
   return (
     <div className={classes.wrapper}>
@@ -82,6 +83,7 @@ const index = () => {
           </div>
         </div>
       </div>
+      <Adverts />
     </div>
   );
 };

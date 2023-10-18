@@ -9,6 +9,7 @@ import classes from "./serch.module.css";
 import SliderCategory from "@/components/SliderCategory/SliderCategory";
 import axiosConfig from "@/utils/axiosConfig";
 import Upper from "@/components/Upper/Upper";
+import { Adverts } from "@/components/ads";
 
 const SearchResults = observer(() => {
   const router = useRouter();
@@ -52,7 +53,7 @@ const SearchResults = observer(() => {
     <>
       <div className={classes.wrapper}>
         <Title title={title} />
-
+        <Adverts />
         {store.categories.Themeslist[0] !== undefined ? (
           <>
             <SliderCategory categories={store.categories.popularThemes} />
