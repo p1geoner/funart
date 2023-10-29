@@ -59,7 +59,7 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
       </Head>
       <div className={classes.wrapper}>
         <Title
-          title={"Coloring for fun 🌈"}
+          title={"Coloring for fun"}
           description={"About 6k coloring pages"}
         />
         <div className={classes.wrapperRelative}>
