@@ -10,7 +10,6 @@ const Select = observer(({ options, value, onChange, activeOption }) => {
   const handleSelect = (option) => {
     onChange(option);
     setIsOpen(false);
-    console.log(option, store.categories.PickedCategory);
   };
 
   const router = useRouter();

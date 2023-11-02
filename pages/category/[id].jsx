@@ -11,7 +11,6 @@ import { Adverts } from "@/components/ads";
 export const getStaticPaths = async () => {
   const response = await axiosConfig().get(`categories/`);
   const categories = response.data.categories;
-  console.log(categories, "categories");
 
   const paths = categories.map((category) => {
     return {
@@ -20,7 +19,6 @@ export const getStaticPaths = async () => {
       },
     };
   });
-  // console.log(paths);
   return {
     paths,
     fallback: false,
@@ -32,7 +30,6 @@ export const getStaticProps = async ({ params }) => {
   const response = await axiosConfig().get(
     `categories/${params?.id}/themes/?page=1&per_page=8`,
   );
-  // console.log(params?.id, params?.params?.name, response);
   const categoryList = response.data;
 
   const response2 = await axiosConfig().get(`themes/populars/`);
@@ -58,7 +55,6 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
     store.pagination.currentPage = 1;
     store.pagination.countPages = pages.length;
     store.pagination.pageData = "category";
-    console.log(asPath);
   }, [asPath]);
 
   return (

@@ -35,7 +35,6 @@ export const getStaticProps = async () => {
 };
 
 const Home = observer(({ categories, popularThemes, themeList }) => {
-  console.log(popularThemes, categories, themeList);
   useEffect(() => {
     store.categories.categorylist = categories !== undefined && categories;
     store.categories.PickedCategory = "";
@@ -43,7 +42,6 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
     store.categories.Themeslist = themeList.themes;
     const pages = themeList.page_data.split(",");
     store.pagination.countPages = pages.length;
-    console.log(pages, pages.length);
     store.pagination.pageData = "main";
   }, []);
 

@@ -22,7 +22,6 @@ export class CategoryStore {
   setNewThemesList = (list) => {
     const themesList = this.Themeslist;
     const NewThemesList = themesList.concat(list);
-    console.log(NewThemesList);
     this.Themeslist = NewThemesList;
   };
   getThemesList = async (page, url) => {
@@ -57,7 +56,6 @@ export class CategoryStore {
     const coloringsList = this.coloringsList;
     const NewColoringsList = coloringsList.concat(list);
     this.coloringsList = list;
-    console.log(this.coloringsList);
   };
   setCategoryList = (list) => {
     this.categorylist = list;

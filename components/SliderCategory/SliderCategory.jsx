@@ -6,7 +6,6 @@ import store from "@/store/store";
 import { observer } from "mobx-react-lite";
 import SliderItem from "./SliderItem/SliderItem";
 const SliderCategory = observer(({ categories }) => {
-  console.log(categories);
   return (
     <div className={classes.wrapper}>
       <p className={classes.sliderTitle}>

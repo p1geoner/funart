@@ -8,16 +8,18 @@ const Ads = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setScreenWidth(window.innerWidth);
+
       if (window.innerWidth > 1000) {
         window.yaContextCb.push(()=>{
           Ya.Context.AdvManager.render({
-            "blockId": "R-A-3408799-1",
-            "renderTo": "yandex_rtb_R-A-3408799-1"
+            "blockId": "R-A-3408799-6",
+            "renderTo": "yandex_rtb_R-A-3408799-6"
           });
         });    
 
       }
-        if (window.innerWidth <= 1000 && window.innerWidth > 768) {
+
+      if (window.innerWidth <= 1000 && window.innerWidth > 768) {
           window.yaContextCb.push(()=>{
             Ya.Context.AdvManager.render({
               "blockId": "R-A-3408799-5",
@@ -25,8 +27,9 @@ const Ads = () => {
             });
           }); 
 
-        }
-        if (window.innerWidth <= 768 && window.innerWidth > 480){
+      }
+
+      if (window.innerWidth <= 768 && window.innerWidth > 480){
           window.yaContextCb.push(() => {
             Ya.Context.AdvManager.render({
               blockId: "R-A-3408799-4",
@@ -35,6 +38,7 @@ const Ads = () => {
           });
         
       }
+
       if (window.innerWidth <= 480 && window.innerWidth > 360){
         window.yaContextCb.push(()=>{
           Ya.Context.AdvManager.render({
@@ -44,6 +48,7 @@ const Ads = () => {
         })
         
       }
+
       if (window.innerWidth <= 360){
         window.yaContextCb.push(()=>{
           Ya.Context.AdvManager.render({
@@ -61,8 +66,8 @@ const Ads = () => {
       if (window.innerWidth > 1000) {
         window.yaContextCb.push(()=>{
           Ya.Context.AdvManager.render({
-            "blockId": "R-A-3408799-1",
-            "renderTo": "yandex_rtb_R-A-3408799-1"
+            "blockId": "R-A-3408799-6",
+            "renderTo": "yandex_rtb_R-A-3408799-6"
           });
         });    
             
@@ -108,7 +113,7 @@ const Ads = () => {
 
   return (
     <div id="advert">
-      <div id="yandex_rtb_R-A-3408799-1"></div>
+      <div id="yandex_rtb_R-A-3408799-6"></div>
       <div id="yandex_rtb_R-A-3408799-2"></div>
       <div id="yandex_rtb_R-A-3408799-3"></div>
       <div id="yandex_rtb_R-A-3408799-4"></div>

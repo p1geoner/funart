@@ -4,7 +4,6 @@ import classes from "./ThemeItem.module.css";
 import Link from "next/link";
 const ThemeItem = ({ theme }) => {
   const src = `https://api-didishka.ru${theme.image}`;
-  // console.log(theme);
   return (
     <Link className={classes.container} href={`/theme/${theme.id}`}>
       <div className={classes.imageBackground}>

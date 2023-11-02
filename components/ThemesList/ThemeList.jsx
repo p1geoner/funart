@@ -13,7 +13,6 @@ const ThemeList = observer(({ name, list }) => {
     if (store.pagination.currentPage !== 1) {
       const NewThemesList = store.categories.Themeslist;
       setThemes(NewThemesList);
-      console.log("list", store.pagination.currentPage);
     } else {
       setThemes(list);
     }
