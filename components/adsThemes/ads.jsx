@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -12,8 +11,8 @@ const Ads = () => {
       if (window.innerWidth > 1000) {
         window.yaContextCb.push(()=>{
           Ya.Context.AdvManager.render({
-            "blockId": "R-A-3408799-6",
-            "renderTo": "yandex_rtb_R-A-3408799-6"
+            "blockId": "R-A-3408799-5",
+            "renderTo": "yandex_rtb_R-A-3408799-5"
           });
         });    
 
@@ -22,8 +21,8 @@ const Ads = () => {
       if (window.innerWidth <= 1000 && window.innerWidth > 768) {
           window.yaContextCb.push(()=>{
             Ya.Context.AdvManager.render({
-              "blockId": "R-A-3408799-5",
-              "renderTo": "yandex_rtb_R-A-3408799-5"
+              "blockId": "R-A-3408799-6",
+              "renderTo": "yandex_rtb_R-A-3408799-6"
             });
           }); 
 
