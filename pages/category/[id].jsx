@@ -9,6 +9,7 @@ import store from "@/store/store";
 import { observer } from "mobx-react-lite";
 import { Adverts } from "@/components/ads";
 import { AdvertsAfterContent } from "@/components/adsAfterContent";
+import Head from "next/head";
 export const getStaticPaths = async () => {
   const response = await axiosConfig().get(`categories/`);
   const categories = response.data.categories;
@@ -60,6 +61,10 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
 
   return (
     <div className={classes.wrapper}>
+      <Head>
+        <script>window.yaContextCb=window.yaContextCb||[]</script>
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
+      </Head>
       <Title
         title={categoryList?.category.name}
         description={categoryList?.category.description}
@@ -67,7 +72,7 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
       <SliderCategory categories={popularThemes} />
       <Adverts />
       <ThemeList name={""} list={categoryList.themes} />
-      <AdvertsAfterContent />
+      {categoryList.themes.length > 12 && <AdvertsAfterContent />}
     </div>
   );
 };
