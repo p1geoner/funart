@@ -10,6 +10,8 @@ import SliderCategory from "@/components/SliderCategory/SliderCategory";
 import axiosConfig from "@/utils/axiosConfig";
 import Upper from "@/components/Upper/Upper";
 import { Adverts } from "@/components/ads";
+import { AdvertsAfterContent } from "@/components/adsAfterContent";
+import Head from "next/head";
 
 const SearchResults = observer(() => {
   const router = useRouter();
@@ -51,6 +53,10 @@ const SearchResults = observer(() => {
 
   return (
     <>
+      <Head>
+        <script>window.yaContextCb=window.yaContextCb||[]</script>
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
+      </Head>
       <div className={classes.wrapper}>
         <Title title={title} />
         {store.categories.Themeslist[0] !== undefined ? (
@@ -63,6 +69,7 @@ const SearchResults = observer(() => {
             <h2 className={classes.subTitle}>Nothing was found 😓 </h2>
           </div>
         )}
+        <AdvertsAfterContent />
       </div>
       <Upper />
     </>

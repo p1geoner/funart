@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Burger.module.css";
 import Link from "next/link";
 import { observer } from "mobx-react-lite";
@@ -6,10 +6,29 @@ import store from "@/store/store";
 const Burger = observer(({ categories }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [listIsOpen, setListIsOpen] = useState(false);
+  const [stylesScroll, setStylesScroll] = useState({});
+  useEffect(() => {
+    if (listIsOpen) {
+      setStylesScroll({ height: "100vh", overflowY: "scroll" });
+    } else {
+      setStylesScroll({ height: "auto", overflowY: "scroll" });
+    }
+  }, [listIsOpen]);
+
   const handleSelect = (option) => {
     setIsOpen(false);
     store.categories.setPickedCategory(option);
   };
+  useEffect(() => {
+    if (isOpen) {
+      if (document !== undefined) {
+        document.body.style = "overflow: hidden; padding-right: 0px;";
+      }
+    } else {
+      document.body.style = "overflow: auto; padding-right: 0px;";
+    }
+  }, [isOpen]);
+
   return (
     <div className={classes.wrapper}>
       <button onClick={() => setIsOpen(!isOpen)} className={classes.button}>
@@ -116,7 +135,7 @@ const Burger = observer(({ categories }) => {
       </button>
       {isOpen && (
         <div onClick={() => setIsOpen(!isOpen)} className={classes.modal}>
-          <div className={classes.modalWrapper}>
+          <div className={classes.modalWrapper} style={stylesScroll}>
             <div className={classes.wrapperInner}>
               {!listIsOpen ? (
                 <>
