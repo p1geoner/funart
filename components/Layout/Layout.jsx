@@ -12,31 +12,18 @@ const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [pathname, setPathname] = useState(router.pathname);
 
-  // useEffect(() => {
-  //   const handleRouteChange = () => {
-  //     setIsLoading(true);
-  //   };
-  //   const handleRouteChangeComplete = () => {
-  //     setIsLoading(false);
-  //     setPathname(router.pathname);
-  //   };
-  //   router.events.on("routeChangeStart", handleRouteChange);
-  //   router.events.on("routeChangeComplete", handleRouteChangeComplete);
-  //   router.events.on("routeChangeError", handleRouteChangeComplete);
-  // }, [router]);
-  // if (
-  //   isLoading &&
-  //   router.pathname !== "/StepByStep" &&
-  //   router.pathname !== "/adv"
-  // ) {
-  //   return (
-  //     <>
-  //       <Header />
-  //       <LoaderPage></LoaderPage>
-  //       <Footer />
-  //     </>
-  //   );
-  // }
+    useEffect(() => {
+        const handleRouteChange = () => {
+                setIsLoading(true);
+              };
+              const handleRouteChangeComplete = () => {
+                setIsLoading(false);
+                setPathname(router.pathname);
+              };
+              router.events.on("routeChangeStart", handleRouteChange);
+              router.events.on("routeChangeComplete", handleRouteChangeComplete);
+              router.events.on("routeChangeError", handleRouteChangeComplete);
+    }, [router]);
   return (
     <>
       {pathname !== "/404" && <Header></Header>}

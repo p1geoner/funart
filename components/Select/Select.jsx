@@ -37,18 +37,17 @@ const Select = observer(({ options, value, onChange, activeOption }) => {
       {isOpen && (
         <div className={classes.options}>
           {options?.map((option) => (
-            <div
-              key={option.id}
-              className={
-                store.categories.PickedCategory?.id === option.id
-                  ? classes.activeOption
-                  : classes.option
-              }
-              onClick={() => handleSelect(option)}>
-              <Link className={classes.link} href={`/category/${option.id}`}>
-                {option.name}
+              <Link key={option.id} className={classes.link} href={`/category/${option.id}`}>
+                <div
+                  className={
+                    store.categories.PickedCategory?.id === option.id
+                      ? classes.activeOption
+                      : classes.option
+                  }
+                  onClick={() => handleSelect(option)}>
+                    {option.name}
+                </div>
               </Link>
-            </div>
           ))}
         </div>
       )}

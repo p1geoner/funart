@@ -18,9 +18,9 @@ const NotFoundPage = () => {
             If you re sure the address was correct, the page may have been
             deleted
           </p>
-          <Link href={"/"} className={classes.linkWrapper}>
+          <button onClick={()=>router.push("/")} className={classes.linkWrapper}>
             <div className={classes.link}>Back to Home</div>
-          </Link>
+          </button>
         </div>
         <div>
           <svg

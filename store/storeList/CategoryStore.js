@@ -25,7 +25,7 @@ export class CategoryStore {
     this.Themeslist = NewThemesList;
   };
   getThemesList = async (page, url) => {
-    const response = await axiosConfig().get(`${url}/?page=${page}&per_page=8`);
+    const response = await axiosConfig().get(`${url}/?page=${page}&per_page=8&language=English`);
     this.setNewThemesList(response.data.themes);
     return response.data.themes;
   };

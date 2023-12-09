@@ -39,6 +39,8 @@
 }
 .linkWrapper {
   text-decoration: none;
+  position: relative;
+  z-index: 99;
 }
 .footer {
   width: 100%;
