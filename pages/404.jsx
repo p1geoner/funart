@@ -9,6 +9,7 @@ const NotFoundPage = () => {
     router.push("404");
   }, []);
 
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.errorWrapper}>
@@ -18,9 +19,9 @@ const NotFoundPage = () => {
             If you re sure the address was correct, the page may have been
             deleted
           </p>
-          <button onClick={()=>router.push("/")} className={classes.linkWrapper}>
+          <Link href={"/"} className={classes.linkWrapper}>
             <div className={classes.link}>Back to Home</div>
-          </button>
+          </Link>
         </div>
         <div>
           <svg
