@@ -68,11 +68,11 @@ const Header = observer(({}) => {
     <header className={headerStyles}>
       <div className={classes.wrapper}>
         <Link className={classes.logo} href={"/"}>
-          Didishka
+          Дидишка
         </Link>
         <div className={classes.adaptiveHeader}>
           <Link className={classes.logo} href={"/"}>
-            Didishka
+            Дидишка
           </Link>
           <div className={classes.burger}>
             {store.categories.categorylist && (
@@ -88,7 +88,7 @@ const Header = observer(({}) => {
               options={store.categories.categorylist}
               onChange={selectCategory}
               activeOption={store.categories.PickedCategory}
-              value="Any category"
+              value="Все категории"
             />
           )}
           <SearchBar />
@@ -99,7 +99,7 @@ const Header = observer(({}) => {
             <Burger categories={store.categories.categorylist} />
           )}
           <Link className={classes.LinkAbout} href={`/about`}>
-            Abous us
+            О нас
           </Link>
         </div>
       </div>

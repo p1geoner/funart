@@ -141,7 +141,7 @@ const Burger = observer(({ categories }) => {
                 <>
                   <Link href={"/about/"}>
                     <div className={classes.navigation}>
-                      <p>About</p>
+                      <p>О нас</p>
                     </div>
                   </Link>
                   <button
@@ -152,7 +152,7 @@ const Burger = observer(({ categories }) => {
                     }}>
                     {store.categories.PickedCategory?.name
                       ? store.categories.PickedCategory?.name
-                      : "Any category"}
+                      : "Все категории"}
                   </button>
                 </>
               ) : (
@@ -189,7 +189,7 @@ const Burger = observer(({ categories }) => {
                     </svg>
                     {store.categories.PickedCategory?.name
                       ? store.categories.PickedCategory?.name
-                      : "Any category"}
+                      : "Все категории"}
                   </div>
                   <div className={classes.categoryList}>
                     {categories?.map((option) => (

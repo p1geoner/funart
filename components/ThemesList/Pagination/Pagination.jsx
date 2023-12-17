@@ -36,7 +36,7 @@ const Pagination = observer(() => {
         " "
       ) : (
         <button onClick={handleNextPage} className={classes.paginationButton}>
-          See more
+          Показать еще
         </button>
       )}
     </>

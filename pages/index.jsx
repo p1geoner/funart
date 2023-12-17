@@ -49,7 +49,7 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
   return (
     <>
       <Head>
-        <title>Didishka - Бесплатные раскраски для детей и взрослых.</title>
+        <title>Дидишка - Бесплатные раскраски для детей и взрослых.</title>
         <meta
           name="description"
           content={`У нас вы найдете бесплатные раскраски на разные темы, от животных и природы до популярных персонажей. Скачивайте и распечатывайте раскраски, чтобы окунуться в мир творчества. Раскраски для всех возрастов и интересов. ${metaData.join(
@@ -70,8 +70,8 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
       </Head>
       <div className={classes.wrapper}>
         <Title
-          title={"Coloring for fun"}
-          description={"About 6k coloring pages"}
+          title={"Воплощай идеи в цвете"}
+          description={"Распечатайте и разукрасьте моменты из любимых мультиков или фильмов прямо сейчас"}
         />
         <div className={classes.wrapperRelative}>
           <div className={classes.wrapperAbsolute}>
@@ -79,7 +79,7 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
           </div>
         </div>
         <Adverts />
-        <ThemeList name={"All Colorings"} list={themeList.themes} />
+        <ThemeList name={"Все раскраски"} list={themeList.themes} />
       </div>
       <Upper />
     </>

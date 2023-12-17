@@ -9,7 +9,7 @@ const SliderCategory = observer(({ categories }) => {
   return (
     <div className={classes.wrapper}>
       <p className={classes.sliderTitle}>
-        The most popular coloring ideas for today
+          Самые популярные раскраски сегодня
       </p>
       <Swiper
         spaceBetween={20}

@@ -6,12 +6,12 @@ const index = () => {
   return (
     <div className={classes.wrapper}>
       <Title
-        title={`About us`}
-        description={`Rosalina is a woman with great power, whose sole duty is to watch over and guard the universe, the Mushroom World and protect the Lumas.`}
+        title={`О нас`}
+        description={`Источник вдохновения в мире раскрасок`}
       />
       <div className={classes.chatWrapper}>
         <div className={classes.mesageWrapper}>
-          <h2 className={classes.mesageTitle}>Who we are? 🤔 </h2>
+          <h2 className={classes.mesageTitle}>Кто мы такие? 🤔 </h2>
           <div className={classes.textWrapper}>
             <svg
               className={classes.svgLeft}
@@ -26,15 +26,12 @@ const index = () => {
               />
             </svg>
             <h3>
-              We are a team of enthusiasts who are delighted to introduce you
-              to our coloring website. Our goal is to inspire children and
-              adults to unleash their creativity and have fun through the art
-              of coloring fascinating pictures.
+              Мы - команда энтузиастов, которые с восторгом представляют вам наш веб-сайт с раскрасками. Наша цель - вдохновить детей и взрослых проявить свою креативность и получить удовольствие от искусства раскрашивания увлекательных картинок.
             </h3>
           </div>
         </div>
         <div className={classes.mesageWrapperRight}>
-          <h2 className={classes.mesageTitle}>Our mission 🫡 </h2>
+          <h2 className={classes.mesageTitle}>Наша миссия 🫡 </h2>
           <div className={classes.textWrapperRight}>
             <svg
               className={classes.svgRight}
@@ -49,18 +46,13 @@ const index = () => {
               />
             </svg>
             <h3>
-              We believe in the power of art and its ability to stimulate
-              imagination, fine motor skills, and concentration. Our collection
-              of coloring pages covers a wide range of themes, from animals and
-              plants to fairy tale characters and vehicles. <br /> <br />{" "}
-              We have coloring pages for children of all ages and skill levels,
-              as well as special options for adults, helping them relax and
-              enjoy the process of creation.
+              Мы верим в силу искусства и его способность стимулировать воображение, моторику и концентрацию. Наша коллекция раскрасок охватывает широкий спектр тем, начиная от животных и растений, заканчивая персонажами сказок и транспортными средствами.
+              У нас есть раскраски для детей всех возрастов и уровней навыков, а также специальные варианты для взрослых, помогающие им расслабиться и наслаждаться процессом творчества.
             </h3>
           </div>
         </div>
         <div className={classes.mesageWrapper}>
-          <h2 className={classes.mesageTitle}>Who we are? 🤔 </h2>
+          <h2 className={classes.mesageTitle}>Что нас выделяет? 🤔 </h2>
           <div className={classes.textWrapper}>
             <svg
               className={classes.svgLeft}
@@ -75,10 +67,7 @@ const index = () => {
               />
             </svg>
             <h3>
-              We are a team of enthusiasts who are delighted to introduce you
-              to our coloring website. Our goal is to inspire children and
-              adults to unleash their creativity and have fun through the art
-              of coloring fascinating pictures.
+              Мы постоянно обновляем нашу коллекцию, чтобы предложить вам новые и захватывающие рисунки каждый раз, когда вы посещаете наш веб-сайт. Наши раскраски создаются с любовью и заботой, чтобы предоставить вам приятный и вдохновляющий опыт раскрашивания.
             </h3>
           </div>
         </div>

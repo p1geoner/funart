@@ -47,7 +47,7 @@ const SearchResults = observer(() => {
       fetchData();
     }
 
-    setTitle(`Coloring pages "${slug}"`);
+    setTitle(`Раскраски "${slug}"`);
     store.pagination.currentSearch = slug;
   }, [slug]);
 
@@ -66,7 +66,7 @@ const SearchResults = observer(() => {
           </>
         ) : (
           <div>
-            <h2 className={classes.subTitle}>Nothing was found 😓 </h2>
+            <h2 className={classes.subTitle}>Ничего не было найдено 😓 </h2>
           </div>
         )}
         <AdvertsAfterContent />

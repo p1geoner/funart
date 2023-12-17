@@ -7,20 +7,20 @@ const Navigation = () => {
       <div className={classes.firstElement}>
         <div className={classes.flexColumn}>
           <Link className={classes.navigationLink} href={"/about"}>
-            About
+            О нас
           </Link>
           <Link className={classes.navigationLink} href={"/about"}>
-            Contact
+            Контакты
           </Link>
         </div>
         <div className={classes.flexColumn}>
           <a className={classes.navigationLink} href="#">
-            Pinterest
+            Пинтерест
           </a>
         </div>
       </div>
       <div className={classes.secondElement}>
-        <p className={classes.navigationText}>©Didishka 2023</p>
+        <p className={classes.navigationText}>©Дидишка 2023</p>
       </div>
     </div>
   );

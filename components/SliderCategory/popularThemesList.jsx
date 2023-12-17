@@ -5,7 +5,7 @@ const PopularThemesList = ({ list }) => {
   return (
     <div className={classes.popularThemes}>
       <p className={classes.sliderTitle}>
-        The most popular coloring ideas for today
+          Самые популярные раскраски сегодня
       </p>
       {list.map((category) => {
         return (

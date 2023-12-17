@@ -51,7 +51,7 @@ const SearchBar = () => {
         onBlur={handleBlur}
         type="text"
         className={classes.input}
-        placeholder="Search"
+        placeholder="Поиск"
         onChange={(e) => handleInputChange(e)}
         onKeyDown={handleKeyDown}
       />

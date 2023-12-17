@@ -14,13 +14,12 @@ const NotFoundPage = () => {
     <div className={classes.wrapper}>
       <div className={classes.errorWrapper}>
         <div className={classes.infoWrapper}>
-          <h1>Something went wrong</h1>
+          <h1>Что-то пошло не так</h1>
           <p>
-            If you re sure the address was correct, the page may have been
-            deleted
+            Если вы уверены, что адрес был правильным, возможно, страница была удалена.
           </p>
           <Link href={"/"} className={classes.linkWrapper}>
-            <div className={classes.link}>Back to Home</div>
+            <div className={classes.link}>На главную</div>
           </Link>
         </div>
         <div>

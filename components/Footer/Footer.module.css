@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  max-width: 478px;
+  /*max-width: 478px;*/
 }
 .navigationWrapper {
   display: flex;
