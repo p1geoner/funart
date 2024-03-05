@@ -18,15 +18,15 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const getStaticProps = async () => {
   const response = await axiosConfig().get(`categories/`);
-  const categories = response.data.categories;
+  const categories = response?.data.categories;
 
   const response2 = await axiosConfig().get(`themes/populars/`);
-  const popularThemes = response2.data.themes;
+  const popularThemes = response2?.data.themes;
 
   const response3 = await axiosConfig().get(
     `themes/?page=1&per_page=8&language=English`,
   );
-  const themeList = response3.data;
+  const themeList = response3?.data;
 
   return {
     props: { categories, popularThemes, themeList },
@@ -45,7 +45,6 @@ const Home = observer(({ categories, popularThemes, themeList }) => {
     store.pagination.pageData = "main";
   }, []);
   const metaData = popularThemes.map((theme) => theme.name);
-  console.log(metaData);
   return (
     <>
       <Head>

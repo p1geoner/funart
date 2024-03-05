@@ -1,7 +1,8 @@
 import axios from "axios";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default function axiosConfig() {
-  const devOrProd = "https://api-didishka.ru/api/";
+  const devOrProd = process.env.NEXT_PUBLIC_BACK_URL;
   const user = "token";
 
   const instance = axios.create({
@@ -29,12 +30,12 @@ export default function axiosConfig() {
     (response) => response,
     async (error) => {
       console.log(error);
-      if (error.response.status === 401 || error.response.status === 404) {
-        // localStorage.clear();
-        // debugger;
-        // window.location.reload();
-        console.log("Not auth", error);
-      }
+      // if (error.response.status === 401 || error.response.status === 404) {
+      //   // localStorage.clear();
+      //   // debugger;
+      //   // window.location.reload();
+      //   console.log("Not auth", error);
+      // }
     },
   );
 

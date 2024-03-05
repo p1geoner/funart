@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import classes from "./SliderItem.module.css";
 import Link from "next/link";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 const SliderItem = ({ category, width, height }) => {
-  const src = `https://api-didishka.ru${category.popular_image}`;
+  const src = `${process.env.NEXT_PUBLIC_BACK_IMG}${category.popular_image}`;
   return (
     <Link
       href={`/theme/${category.id}`}

@@ -13,6 +13,7 @@
   cursor: pointer;
   border-radius: 16px;
   border: 1px solid #c8c8c8;
+
 }
 .image {
   width: 100%;
@@ -24,6 +25,7 @@
   border-bottom: 1px solid #c8c8c8;
   box-sizing: inherit;
   overflow: hidden;
+  background: white ;
 }
 .buttonPrint {
   width: 42px;
@@ -53,8 +55,8 @@
   width: 100%;
   padding: 20px;
   z-index: 2;
-  background-color: #fff;
   align-items: center;
+  background: #FBF8FF;
 }
 .nameTitle {
   color: var(--grey-light, #828282);
@@ -69,6 +71,11 @@
   display: flex;
   gap: 14px;
 }
+
+.container {
+  background: #FBF8FF;
+}
+
 .container:hover .nameTitle {
   color: #976eaf;
 }

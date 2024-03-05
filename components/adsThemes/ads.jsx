@@ -110,7 +110,6 @@ const Ads = () => {
       <div className={styles.maxWidth} id="container">
         <div className={styles.sticky} id="yandex_rtb_R-A-3408799-6"></div>
       </div>
-
       <div id="yandex_rtb_R-A-3408799-2"></div>
       <div id="yandex_rtb_R-A-3408799-3"></div>
       <div id="yandex_rtb_R-A-3408799-4"></div>

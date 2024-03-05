@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axiosConfig from "@/utils/axiosConfig";
-import ThemeList from "@/components/ThemesList/ThemeList";
+import ThemeList from "@/components/ThemeslistCategoryPage/ThemeList";
 import classes from "./categoryPage.module.css";
 import Title from "@/components/Title/Title";
 import SliderCategory from "@/components/SliderCategory/SliderCategory";
@@ -10,6 +10,8 @@ import { observer } from "mobx-react-lite";
 import { Adverts } from "@/components/ads";
 import { AdvertsAfterContent } from "@/components/adsAfterContent";
 import Head from "next/head";
+import PopularThemesList from "@/components/SliderCategory/popularThemesList";
+import {AdvertsThematics} from "@/components/adsThemes";
 export const getStaticPaths = async () => {
   const response = await axiosConfig().get(`categories/`);
   const categories = response.data.categories;
@@ -47,6 +49,7 @@ export const getStaticProps = async ({ params }) => {
 
 const CategoryPage = ({ categoryList, popularThemes, categories }) => {
   const { asPath, pathname } = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     store.categories.categorylist = categories !== undefined && categories;
     store.categories.PickedCategory = categoryList.category;
@@ -57,6 +60,7 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
     store.pagination.currentPage = 1;
     store.pagination.countPages = pages.length;
     store.pagination.pageData = "category";
+    setIsVisible(window.innerWidth > 1000)
   }, [asPath]);
 
   return (
@@ -69,11 +73,22 @@ const CategoryPage = ({ categoryList, popularThemes, categories }) => {
         title={categoryList?.category.name}
         description={categoryList?.category.description}
       />
-      <SliderCategory categories={popularThemes} />
-      <Adverts />
-      <ThemeList name={""} list={categoryList.themes} />
-      {categoryList.themes.length > 12 && <AdvertsAfterContent />}
-    </div>
+      <div className={classes.flexWrapper}>
+        <div>
+          <PopularThemesList list={popularThemes} />
+          <div className={classes.slider}>
+            {!isVisible && <SliderCategory categories={popularThemes} />}
+          </div>
+          {isVisible && <AdvertsThematics></AdvertsThematics>}
+        </div>
+        {!isVisible &&<Adverts />}
+
+        <div className={classes.themesWrapper}>
+          <ThemeList name={""} list={categoryList.themes} />
+        </div>
+        {categoryList.themes.length > 12 && <AdvertsAfterContent />}
+        </div>
+      </div>
   );
 };
 

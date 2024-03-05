@@ -10,7 +10,6 @@
   font-size: 18px;
   line-height: 140%;
   color: #4a4a4a;
-  margin-bottom: 20px;
 }
 .popularThemes {
   display: flex;
@@ -19,15 +18,24 @@
   max-width: 290px;
 }
 .swiperSlide {
-  min-width: 325px;
+  max-width: 325px;
 }
 .swiper {
   width: 100%;
   position: relative;
   z-index: 1;
+  overflow: visible !important;
 }
 @media (max-width: 1000px) {
   .popularThemes {
     display: none;
   }
 }
+
+@media (max-width: 400px) {
+  .swiperSlide {
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
+

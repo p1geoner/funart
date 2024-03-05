@@ -1,8 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import classes from "./AboutPage.module.css";
 import Title from "@/components/Title/Title";
 import { Adverts } from "@/components/ads";
-const index = () => {
+import axiosConfig from "@/utils/axiosConfig";
+import store from "@/store/store";
+import {observer} from "mobx-react-lite";
+
+export const getStaticProps = async () => {
+  const response = await axiosConfig().get(`categories/`);
+  const categories = response?.data.categories;
+  return {
+    props: { categories },
+    revalidate: 60,
+  };
+};
+
+const Index = observer(({categories}) => {
+  useEffect(()=>{
+    store.categories.categorylist = categories !== undefined && categories;
+    store.categories.PickedCategory = "";
+  },[])
   return (
     <div className={classes.wrapper}>
       <Title
@@ -74,6 +91,6 @@ const index = () => {
       </div>
     </div>
   );
-};
+});
 
-export default index;
+export default Index;

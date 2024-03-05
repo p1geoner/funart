@@ -3,9 +3,32 @@
   margin: 0 auto;
   margin-top: 80px;
 }
+
+.flexWrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 80px;
+}
+.themesWrapper {
+  margin-top: 50px;
+}
+@media (max-width: 1000px) {
+  .flexWrapper {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+  .themesWrapper {
+    margin: 0;
+  }
+}
+
+
 @media (max-width: 1360px) {
   .wrapper {
     width: 100%;
     padding: 0 0px;
   }
 }
+
+

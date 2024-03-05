@@ -31,6 +31,9 @@
   .description {
     font-size: 18px;
   }
+  .wrapper {
+    padding: 60px 30px;
+  }
 }
 @media (max-width: 768px) {
   .title {
@@ -46,5 +49,11 @@
   }
   .description {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    padding: 60px 20px;
   }
 }

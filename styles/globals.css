@@ -12,7 +12,7 @@
 }
 body {
   background-color: var(--backColor);
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 * {
   font-family: Inter;

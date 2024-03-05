@@ -14,33 +14,9 @@ const SliderCategory = observer(({ categories }) => {
       <Swiper
         spaceBetween={20}
         height={420}
+        draggable={true}
+        slidesPerView={"auto"}
         loop={true}
-        slidesPerView={4}
-        width={320}
-        breakpoints={{
-          1320: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1112: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          900: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          500: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            loop: true,
-          },
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-          },
-        }}
         className={classes.swiper}>
         {categories.map((category) => {
           return (

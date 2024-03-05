@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { Adverts } from "@/components/ads";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 export const getStaticProps = async ({ params }) => {
   const id = params.id.toString();
   let prevId = parseInt(params.id) - 1;
@@ -49,7 +50,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
   const prevId = parseInt(id) - 1;
   const nextId = parseInt(id) + 1;
   const handlePrint = () => {
-    const url = `https://api-didishka.ru${coloring.image}`;
+    const url = `${process.env.NEXT_PUBLIC_BACK_IMG}${coloring.image}`;
     const printWindow = window.open("", "_blank");
     printWindow.document.write("<html><head><title>Print</title></head><body>");
     printWindow.document.write(
@@ -69,7 +70,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
   };
 
   const handleDownload = () => {
-    axiosConfig().get(`https://api-didishka.ru/api/colorings/5/download/`);
+    axiosConfig().get(`colorings/5/download/`);
   };
 
   return (
@@ -90,7 +91,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
               />
             </g>
           </svg>
-          Back
+          Назад
         </button>
         <div className={classes.buttonsInnerWrapper}>
           <button className={classes.button} onClick={handlePrint}>
@@ -108,11 +109,11 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
                 />
               </g>
             </svg>
-            Print
+            Pаспечатать
           </button>
           <a
             className={classes.button}
-            href={`https://api-didishka.ru/api/colorings/${coloring.id}/download/`}
+            href={`${process.env.NEXT_PUBLIC_BACK_URL}colorings/${coloring.id}/download/`}
             download={`${coloring.name}.jpeg`}>
             <svg
               width="24"
@@ -128,7 +129,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
                 />
               </g>
             </svg>
-            Download
+            Скачать
           </a>
         </div>
       </div>
@@ -136,7 +137,7 @@ const SingleColoring = ({ coloring, hasNext, hasPrev }) => {
         <h1 className={classes.title}>{coloring.name}</h1>
         <Image
           className={classes.image}
-          src={`https://api-didishka.ru${coloring.image}`}
+          src={`${process.env.NEXT_PUBLIC_BACK_IMG}${coloring.image}`}
           width={1000}
           height={1000}
           alt={`${coloring.name}`}

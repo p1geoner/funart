@@ -11,6 +11,5 @@
 .wrapperAbsolute {
   position: absolute;
   z-index: 2;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%
 }
